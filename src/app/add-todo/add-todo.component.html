@@ -1,0 +1,8 @@
+<input
+  type="text"
+  placeholder="Todo"
+  required
+  autofocus
+  [(ngModel)]="todo"
+/>
+<app-button [label]="'Add'" (onClick)="addTodo()"></app-button>

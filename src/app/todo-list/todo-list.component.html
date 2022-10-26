@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let todo of todos">
+    <span [ngClass]="{completed: todo.completed}">
+      {{todo.title}}
+    </span>
+    <app-button [label]="'x'" (onClick)="deleteTodo(todo.id)"></app-button>
+    <app-button [label]="'✓'" (onClick)="doneTodo(todo.id)" *ngIf="!todo.completed"></app-button>
+  </li>
+</ul>
